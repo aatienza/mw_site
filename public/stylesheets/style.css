@@ -1,8 +1,73 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+	background-color: black;
 }
 
-a {
-  color: #00B7FF;
+body {
+	background-image: url('/images/landing_page/joe_horizontal.png');
+	background-position: 0 50px;
+	background-size: 100%;
+	background-repeat: no-repeat;	
+}
+
+nav {
+	background-color: #000 !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.middle {
+	padding-top: 25%;
+	transition: all 250ms;
+	-webkit-transition: all 250ms;
+	-moz-transition: all 250ms;
+	-o-transition: all 250ms;
+}
+
+@media screen and (max-width: 800px) {
+	.middle {
+		padding-top: 30%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.middle {
+		padding-top: 35%;
+	}
+}
+
+.marble_logo {
+	background-image: url('/images/mwlogo.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 175px;
+	height: 60px;
+	margin: 5px;
+}
+
+.info {
+	margin: 50px 0;
+}
+
+.info_panel {
+	height: 180px;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.info_panel p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	text-align: center;
+	background: rgba(0,0,0, 0.7);
+	padding: 10px;
+	margin: 0;
+	color: white;
 }

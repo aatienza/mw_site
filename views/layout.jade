@@ -1,7 +1,16 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/uikit/css/uikit.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+		script(src='/uikit/js/uikit.min.js')
+	body
+		include ./includes/navbar.jade
+		include ./includes/hero.jade
+
+		.middle
+			.uk-container.uk-container-center
+				.uk-grid
+					block content
