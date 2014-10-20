@@ -33,4 +33,20 @@ router.get('/club', function(req, res) {
 	res.render('club', { title: 'Marble Weightlifting'});
 });
 
+router.get('/coach', function(req, res) {
+	res.render('coach', { title: 'Marble Weightlifting'});
+});
+
+router.get('/schedule', function(req, res) {
+	res.render('schedule', { title: 'Marble Weightlifting'});
+});
+
+router.get('/blog', function(req, res) {
+	res.render('blog', { title: 'Marble Weightlifting'});
+});
+
+router.get('/join', function(req, res) {
+	res.render('join', { title: 'Marble Weightlifting'});
+});
+
 module.exports = router;
