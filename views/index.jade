@@ -4,18 +4,30 @@ block content
 	.uk-width-1-1
 		p Marble Weightlifting is an independent gym that offers expert instruction and personal attention from experienced and qualified coaches and trainers. We are committed to getting each client stronger and ready to overcome their obstacles no matter what they may be.
 	
-	.uk-width-2-3.uk-container.uk-container-center.uk-text-center
-		div test
+	
+
+	.uk-container.uk-container-center.uk-width-1-1.uk-grid
+		.uk-width-medium-1-2.actions
+			div.uk-panel.action_button
+				a(href="/join" class="")
+					h3.uk-panel-title Join Now
+
+		.uk-width-medium-1-2.actions
+			div.uk-panel.action_button
+				a(href="/coach" class="")
+					h3.uk-panel-title Meet the Coach
 			
 
 	.uk-width-1-1
-		h1.info Learn about:
+		h1.info Learn About Our Services:
 
 	each panel in panels
-		div.uk-width-large-1-4.uk-width-small-1-1.uk-overlay.info
+		div.uk-width-large-1-4.uk-width-small-1-1.uk-width-medium-1-2.uk-overlay.info
 			div(class= "uk-panel uk-panel-box uk-panel-box-secondary info_panel " + panel.class 
 			style="background-image: url('" + "/images/landing_page" + panel.img + "');")
 				p= panel.type
 				div(class="uk-overlay-area")
+					div.uk-overlay-area-content
+						p= panel.text
 
 							
