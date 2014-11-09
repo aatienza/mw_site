@@ -1,0 +1,41 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/uikit/css/uikit.min.css')
+		link(rel='stylesheet', href='/stylesheets/style1.css')
+		script(src='/javascripts/jquery.min.js')
+		script(src='/uikit/js/uikit.min.js')
+	body
+		
+		nav.uk-navbar.uk-navbar-attached
+			img.nav_banner(src="/images/nav_banner.png")
+
+			.uk-container.uk-container-center
+				
+				.uk-navbar-center.uk-hidden-small
+					ul.uk-navbar-nav
+						li
+							a(href="/landing1" class="") home
+						li
+							a(href="/landing1" class="") about
+						li
+							a(href="/landing1" class="") services
+						li
+							a(href="/landing1" class="") schedule
+						li
+							a(href="/landing1" class="") blog
+						li
+							a(href="/landing1" class="") join
+						li
+							a(href="/landing1" class="") contact
+						
+				a(class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas="{target:'#marble_nav'}")
+				
+				div(class="uk-navbar-brand uk-navbar-center uk-visible-small marble_logo")
+
+
+		.uk-container.uk-container-center.main_content
+			.uk-grid
+				include ./includes/mobile_nav.jade
+				block content

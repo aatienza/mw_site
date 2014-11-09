@@ -53,4 +53,8 @@ router.get('/join', function(req, res) {
 	res.render('join', { title: 'Marble Weightlifting'});
 });
 
+router.get('/landing1', function(req, res) {
+	res.render('landing1', { title: 'Marble Weightlifting'});
+});
+
 module.exports = router;
