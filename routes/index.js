@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
 					}
 				];
 
-	res.render('index', { title: 'Marble Weightlifting', panels: panels });
+	res.render('landing1', { title: 'Marble Weightlifting', panels: panels });
 });
 
 router.get('/club', function(req, res) {
@@ -54,7 +54,7 @@ router.get('/join', function(req, res) {
 });
 
 router.get('/landing1', function(req, res) {
-	res.render('landing1', { title: 'Marble Weightlifting'});
+	res.render('index', { title: 'Marble Weightlifting'});
 });
 
 module.exports = router;
