@@ -1,0 +1,85 @@
+extends layout1
+
+block content
+  
+  link(rel='stylesheet', href='//cdn.quilljs.com/0.19.4/quill.snow.css')
+
+  input#title(type='text', placeholder='Blog Title', class='uk-width-1-1 blog_title')
+
+  #toolbar.uk-width-1-1
+    
+    span.ql-format-group
+      select.ql-font
+        option(value='sans-serif') Sans Serif
+        option(value='serif') Serif
+        option(value='monospace') Monospace
+
+    span.ql-format-group
+      select.ql-size
+        option(value='small') Small
+        option(value='normal') Normal
+        option(value='large') Large
+        option(value='huge') Huge
+
+    span.ql-format-group
+      span.ql-format-button.ql-bold
+      span.ql-format-separator
+      span.ql-format-button.ql-italic
+      span.ql-format-separator
+      span.ql-format-button.ql-strike
+      span.ql-format-separator
+      span.ql-format-button.ql-underline
+
+    span.ql-format-group
+      span.ql-format-button.ql-link
+
+  #editor.uk-width-1-1
+
+  input(class='post', value='Post', type='button')
+
+  input(class='view', value='View Post', type='button')
+
+  script(type='text/javascript', src='//cdn.quilljs.com/0.19.4/quill.js')
+
+  script(type='text/javascript').
+    var quill = new Quill('#editor', {theme : 'snow'});
+    quill.addModule('toolbar', { container: '#toolbar' });
+
+    $(function(){
+      $('.post').click(function(){
+        
+        var html = quill.getHTML();
+
+        var title = $('#title').val();
+        
+        if( !title ) {
+
+          $('#title').addClass('error');
+          $('#title').change(function(){
+            $('#title').removeClass('error');
+            $('#title').unbind('change');
+          });
+
+          return;
+        }
+
+        $.ajax({
+            url: '/doPost',
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            data: JSON.stringify({'title': title, 'content': html})
+        }).done(function(){
+          
+          $('.view').unbind('click');
+
+          $('.view').addClass('active');
+          $('.view').click(function(){ 
+            var title = $('#title').val();
+            window.open('/post/' + title);
+          });
+          
+        });
+
+      });
+    })();

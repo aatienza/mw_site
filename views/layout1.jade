@@ -2,10 +2,17 @@ doctype html
 html
 	head
 		title= title
+
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
 		link(rel='stylesheet', href='/uikit/css/uikit.min.css')
 		link(rel='stylesheet', href='/stylesheets/style1.css')
 		script(src='/javascripts/jquery.min.js')
 		script(src='/uikit/js/uikit.min.js')
+
 	body
 		
 		nav.uk-navbar.uk-navbar-attached
@@ -31,11 +38,11 @@ html
 							a(href="/landing1" class="") contact
 						
 				a(class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas="{target:'#marble_nav'}")
-				
-				div(class="uk-navbar-brand uk-navbar-center uk-visible-small marble_logo")
 
 
 		.uk-container.uk-container-center.main_content
 			.uk-grid
+				
 				include ./includes/mobile_nav.jade
+				
 				block content
