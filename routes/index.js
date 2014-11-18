@@ -1,10 +1,36 @@
 var express = require('express');
 var router = express.Router();
+var request = require('request');
+
+var api_key = 'AIzaSyCmLhj2EuteEJFa3hOCKGJVWFda6aSI65M';
+var google_api = 'https://www.googleapis.com/blogger/v3/blogs/';
+var blog_id = '8735350545115790025';
+
 
 /* GET home page. */
 router.get('/', function(req, res) {
 	
-	res.render('landing1', { title: 'Marble Weightlifting' });
+	var url = google_api + blog_id + '/posts' + '?key=' + api_key; 
+
+	request( url , function (error, response, body) {
+		
+		var blog = false;
+
+		if (!error && response.statusCode == 200) {
+
+			var blogs = JSON.parse( body );
+			blog = blogs.items[0];
+
+		} else {
+
+			console.log( error );
+
+		}
+
+		res.render('landing1', { title: 'Marble Weightlifting', blog: blog });
+	});
+
+	
 });
 
 router.get('/club', function(req, res) {
