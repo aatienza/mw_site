@@ -112,3 +112,8 @@ input.view.active {
 	display: inline-block;
 	margin-right: 25px;
 }
+
+.blog {
+	margin: 25px 0;
+	margin-bottom: 125px;
+}

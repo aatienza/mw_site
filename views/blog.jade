@@ -2,3 +2,8 @@ extends layout
 
 block content
 	h1 blog
+
+	each blog in blogs
+		.blog
+			h3= blog.title
+			div !{blog.content}

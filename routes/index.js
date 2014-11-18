@@ -46,7 +46,27 @@ router.get('/schedule', function(req, res) {
 });
 
 router.get('/blog', function(req, res) {
-	res.render('blog', { title: 'Marble Weightlifting'});
+	
+	var url = google_api + blog_id + '/posts?maxResults=999999999' + '&key=' + api_key;
+
+	request( url , function (error, response, body) {
+		
+		var blogs = false;
+
+		if (!error && response.statusCode == 200) {
+
+			var blogs = JSON.parse( body );
+			blogs = blogs.items;
+
+		} else {
+
+			console.log( error );
+
+		}
+
+		res.render('blog', { title: 'Marble Weightlifting', blogs: blogs});
+	});
+	
 });
 
 router.get('/join', function(req, res) {
@@ -54,7 +74,7 @@ router.get('/join', function(req, res) {
 });
 
 router.get('/admin', function(req, res) {
-	res.render('add_post', { title: 'Marble Weightlifting'});
+	//res.render('add_post', { title: 'Marble Weightlifting'});
 });
 
 router.get('/landing1', function(req, res) {
