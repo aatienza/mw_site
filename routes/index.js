@@ -14,6 +14,8 @@ router.get('/', function(req, res) {
 
 	request( url , function (error, response, body) {
 		
+		console.log( response );
+
 		var blog = false;
 
 		if (!error && response.statusCode == 200) {
