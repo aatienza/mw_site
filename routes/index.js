@@ -13,8 +13,6 @@ router.get('/', function(req, res) {
 	var url = google_api + blog_id + '/posts' + '?key=' + api_key; 
 
 	request( url , function (error, response, body) {
-		
-		console.log( response );
 
 		var blog = false;
 
