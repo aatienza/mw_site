@@ -13,6 +13,10 @@ body {
 	color: #ddd;
 }
 
+p {
+	color: #eee;
+}
+
 body nav.uk-navbar {
 	background: #021DC1;
 	/*position: fixed;
@@ -131,5 +135,30 @@ input.view.active {
 
 .uk-navbar-nav>li>a {
 	padding: 0;
-	text-align: left;
+	border-left: 1px solid #505F6B
+}
+
+.uk-navbar-nav>li:last-child>a {
+	border-right: 1px solid #505F6B
+}
+
+.section {
+	margin-bottom: 25px;
+}
+
+.subsection {
+	margin: 25px 0;
+}
+
+.click-here a {
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+}
+
+.click-here a input[type=button] {
+    margin: 0;
+    margin-bottom: 25px;
+    width: 400px;
+    height: 65px;
 }

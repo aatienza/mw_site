@@ -47,26 +47,27 @@ router.get('/schedule', function(req, res) {
 
 router.get('/blog', function(req, res) {
 	
-	var url = google_api + blog_id + '/posts?maxResults=999999999' + '&key=' + api_key;
+	// var url = google_api + blog_id + '/posts?maxResults=999999999' + '&key=' + api_key;
 
-	request( url , function (error, response, body) {
+	// request( url , function (error, response, body) {
 		
-		var blogs = false;
+	// 	var blogs = false;
 
-		if (!error && response.statusCode == 200) {
+	// 	if (!error && response.statusCode == 200) {
 
-			var blogs = JSON.parse( body );
-			blogs = blogs.items;
+	// 		var blogs = JSON.parse( body );
+	// 		blogs = blogs.items;
 
-		} else {
+	// 	} else {
 
-			console.log( error );
+	// 		console.log( error );
 
-		}
+	// 	}
 
-		res.render('blog', { title: 'Marble Weightlifting', blogs: blogs});
-	});
+	// 	res.render('blog', { title: 'Marble Weightlifting', blogs: blogs});
+	// });
 	
+	res.render('blog', { title: 'Marble Weightlifting'});
 });
 
 router.get('/join', function(req, res) {
