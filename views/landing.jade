@@ -1,4 +1,4 @@
-extends layout1
+extends layout
 
 block content
 
@@ -27,7 +27,7 @@ block content
 
 	.uk-width-medium-1-2.uk-width-small-1-1
 		h3
-			a(href="/landing1") blog
+			a(href="/blog") Blog
 
 		.uk-visible-small
 			img(src="/images/landing_page/mw_gym.jpg")
@@ -36,43 +36,47 @@ block content
 		
 		div !{blog.content}
 
-
 	.divider
 
-	.uk-width-medium-2-5.uk-width-small-1-1
-		p Today's Workout:
 
-		span Snatch + OHSq	75% 	(2 + 2)r4s
-		br
-		span Snatch Pulls	90%		3r4s
-		br
-		span Snatch Press	Light	5r4s
-		br
-		br
-		span Conditioning: 3 rounds
-		br
-		span 250m Row
-		br
-		span 12 KB swings
-			a Workout Archive
+	//
+		.divider
 
-	.uk-width-medium-1-5.uk-width-small-1-1
-		div(style="height: 1px;")
+		.uk-width-medium-2-5.uk-width-small-1-1
+			p Today's Workout:
 
-	.uk-width-medium-2-5.uk-width-small-1-1
-		h3
-			a(href="/landing1") Upcoming Events
-		
-		ul
-			li
-				span November 23, 2014
-				br
-				span - USAW Trinity College Championships
-			li
-				span December 6th, 2014
-				br
-				span - Pearl Harbor Clean Comp
-			li
-				span January 25, 2015
-				br
-				span - USAPL Beast Winter Classic
+			span Snatch + OHSq	75% 	(2 + 2)r4s
+			br
+			span Snatch Pulls	90%		3r4s
+			br
+			span Snatch Press	Light	5r4s
+			br
+			br
+			span Conditioning: 3 rounds
+			br
+			span 250m Row
+			br
+			span 12 KB swings
+				a Workout Archive
+
+		.uk-width-medium-1-5.uk-width-small-1-1
+			div(style="height: 1px;")
+
+	//	
+		.uk-width-medium-2-5.uk-width-small-1-1
+			h3
+				a(href="/landing1") Upcoming Events
+			
+			ul
+				li
+					span November 23, 2014
+					br
+					span - USAW Trinity College Championships
+				li
+					span December 6th, 2014
+					br
+					span - Pearl Harbor Clean Comp
+				li
+					span January 25, 2015
+					br
+					span - USAPL Beast Winter Classic

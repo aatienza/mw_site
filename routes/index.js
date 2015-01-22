@@ -27,7 +27,7 @@ router.get('/', function(req, res) {
 
 		}
 
-		res.render('landing1', { title: 'Marble Weightlifting', blog: blog });
+		res.render('landing', { title: 'Marble Weightlifting', blog: blog });
 	});
 
 	
@@ -73,40 +73,52 @@ router.get('/join', function(req, res) {
 	res.render('join', { title: 'Marble Weightlifting'});
 });
 
-router.get('/admin', function(req, res) {
-	//res.render('add_post', { title: 'Marble Weightlifting'});
+router.get('/about', function(req, res) {
+	res.render('about', { title: 'Marble Weightlifting'});
 });
 
-router.get('/landing1', function(req, res) {
-
-	var panels = [
-					{
-					 'type': 'Olympic Weightlifting',
-					 'text': 'Olympic weightlifting, also called Olympic-style weightlifting, or weightlifting, is an athletic discipline in the modern Olympic programme in which the athlete attempts a maximum-weight single lift of a barbell loaded with weight plates.',
-					 'class': 'oly',
-					 'img': '/snatch.jpg'
-					},
-					{
-					 'type': 'Powerlifting',
-					 'text': 'Powerlifting is a strength sport that consists of three attempts at maximal weight on three lifts: squat, bench press, and deadlift.',
-					 'class': 'powerlifting',
-					 'img': '/tom.jpg'
-					},
-					{
-					 'type': 'Bodybuilding',
-					 'text': 'Become Ahh-nold',
-					 'class': 'bodybuilding',
-					 'img': '/bicep.jpg'
-					},
-					{
-					 'type': 'Strength & Conditioning',
-					 'text': 'CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT',
-					 'class': 'strenth_conditioning',
-					 'img': '/strength.png'
-					}
-				];
-
-	res.render('index', { title: 'Marble Weightlifting' , panels: panels });
+router.get('/services', function(req, res) {
+	res.render('services', { title: 'Marble Weightlifting'});
 });
+
+router.get('/contact', function(req, res) {
+	res.render('contact', { title: 'Marble Weightlifting'});
+});
+
+// router.get('/admin', function(req, res) {
+// 	res.render('add_post', { title: 'Marble Weightlifting'});
+// });
+
+// router.get('/landing1', function(req, res) {
+
+// 	var panels = [
+// 					{
+// 					 'type': 'Olympic Weightlifting',
+// 					 'text': 'Olympic weightlifting, also called Olympic-style weightlifting, or weightlifting, is an athletic discipline in the modern Olympic programme in which the athlete attempts a maximum-weight single lift of a barbell loaded with weight plates.',
+// 					 'class': 'oly',
+// 					 'img': '/snatch.jpg'
+// 					},
+// 					{
+// 					 'type': 'Powerlifting',
+// 					 'text': 'Powerlifting is a strength sport that consists of three attempts at maximal weight on three lifts: squat, bench press, and deadlift.',
+// 					 'class': 'powerlifting',
+// 					 'img': '/tom.jpg'
+// 					},
+// 					{
+// 					 'type': 'Bodybuilding',
+// 					 'text': 'Become Ahh-nold',
+// 					 'class': 'bodybuilding',
+// 					 'img': '/bicep.jpg'
+// 					},
+// 					{
+// 					 'type': 'Strength & Conditioning',
+// 					 'text': 'CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT CROSSFIT',
+// 					 'class': 'strenth_conditioning',
+// 					 'img': '/strength.png'
+// 					}
+// 				];
+
+// 	res.render('index', { title: 'Marble Weightlifting' , panels: panels });
+// });
 
 module.exports = router;

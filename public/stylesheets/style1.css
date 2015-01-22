@@ -3,6 +3,11 @@ body {
 	height: 100%;
 }
 */
+
+html {
+	height: 100%;
+	background: #000;
+}
 body {
 	background: #000;
 	color: #ddd;
@@ -47,9 +52,15 @@ body nav.uk-navbar {
 }
 
 .main_content {
-	padding-top:25px;
+	/*padding-top: 25px;
+	padding-bottom: 25px;*/
 
-	padding-bottom: 25px;
+	/*padding: 50px 0;*/
+
+	/*padding: 80px;*/
+
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .divider {
@@ -116,4 +127,9 @@ input.view.active {
 .blog {
 	margin: 25px 0;
 	margin-bottom: 125px;
+}
+
+.uk-navbar-nav>li>a {
+	padding: 0;
+	text-align: left;
 }
