@@ -25,24 +25,27 @@ block content
 		a(href="/services")
 			input(type="button" value="Learn More About Our Services")
 
+	.divider
+
+	.uk-width-medium-1-2.uk-width-small-1-1.uk-hidden-small
+		img(src="/images/landing_page/mw_gym.jpg").blog_img
+
+
+	.uk-width-medium-1-2.uk-width-small-1-1
+		h3
+			a(href="/blog") Blog
+
+		.uk-visible-small
+			img(src="/images/landing_page/mw_gym.jpg")
+
+		h4= blog.title
+		
+		div !{blog.content}
+
+	.divider
+
+
 	//
-		.divider
-
-		.uk-width-medium-1-2.uk-width-small-1-1.uk-hidden-small
-			img(src="/images/landing_page/mw_gym.jpg").blog_img
-
-
-		.uk-width-medium-1-2.uk-width-small-1-1
-			h3
-				a(href="/blog") Blog
-
-			.uk-visible-small
-				img(src="/images/landing_page/mw_gym.jpg")
-
-			h4= blog.title
-			
-			div !{blog.content}
-
 		.divider
 
 		.uk-width-medium-2-5.uk-width-small-1-1
@@ -65,7 +68,7 @@ block content
 		.uk-width-medium-1-5.uk-width-small-1-1
 			div(style="height: 1px;")
 
-	
+	//	
 		.uk-width-medium-2-5.uk-width-small-1-1
 			h3
 				a(href="/landing1") Upcoming Events
